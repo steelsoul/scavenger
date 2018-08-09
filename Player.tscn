@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://AnimatedSprite.tscn" type="PackedScene" id=2]
+
+[node name="Player" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 0 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+speed = 50
+
+[node name="Animation" parent="." index="0" instance=ExtResource( 2 )]
+
+scale = Vector2( 2, 2 )
+animation = "Player"
+frame = 0
+centered = false
+
+[node name="StepTimer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = true
+autostart = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[connection signal="body_shape_entered" from="." to="." method="_on_Player_body_shape_entered"]
+
+[connection signal="timeout" from="StepTimer" to="." method="_on_StepTimer_timeout"]
+
+
