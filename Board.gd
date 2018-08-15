@@ -2,11 +2,14 @@ extends Node2D
 
 var FLOOR_DIC = {}
 var WALL_DIC = {}
-var LUT_DIC = {}
-var FLOOR_COUNT = 8
-var WALL_COUNT = 18
-var LUT_COUNT = 2
-var BOARD_SIZE = 8
+var FOOD_DIC = {}
+var OUTER_WALL_DIC = {}
+const FLOOR_COUNT = 8
+const OUTER_WALL_COUNT = 4
+const WALL_COUNT = 14
+const FOOD_COUNT = 2
+
+export (int) var BOARD_SIZE = 8
 
 export (int) var level = 0 
 
@@ -20,35 +23,23 @@ func _ready():
 	pass
 	
 func setup_dictionaries():
-	make_floor_dic()
-	make_wall_dic()
-	make_lut_dic()
+	make_any_dic("Floor", FLOOR_COUNT, FLOOR_DIC)
+	make_any_dic("Wall", WALL_COUNT, WALL_DIC)
+	make_any_dic("Food", FOOD_COUNT, FOOD_DIC)
+	make_any_dic("OuterWall", OUTER_WALL_COUNT, OUTER_WALL_DIC)
 
-func make_floor_dic():
-	for x in range(1, FLOOR_COUNT + 1):
-		var name = "Floor" + str(x)
+func make_any_dic(item_name, item_count, item_dic):
+	for x in range(1, item_count + 1):
+		var name = item_name + str(x)
 		var value = $Background.tile_set.find_tile_by_name(name)
-		FLOOR_DIC[x-1] = value
-	pass
-
-func make_wall_dic():
-	for x in range(1, WALL_COUNT + 1):
-		var name = "Wall" + str(x)
-		var value = $Background.tile_set.find_tile_by_name(name)
-		WALL_DIC[x-1] = value
-	
-func make_lut_dic():
-	for x in range(1, LUT_COUNT + 1):
-		var name = "Food" + str(x)
-		var value = $LUT.tile_set.find_tile_by_name(name)
-		LUT_DIC[x-1] = value
+		item_dic[x-1] = value
 
 func prepare_board():
 	for x in range(0, BOARD_SIZE):
 		for y in range(0, BOARD_SIZE):
 			if x == 0 || x == 7 || y == 0 || y == 7:
-				var index = randi() % WALL_COUNT
-				$Background.set_cell(x, y, WALL_DIC[index])
+				var index = randi() % OUTER_WALL_COUNT
+				$Background.set_cell(x, y, OUTER_WALL_DIC[index])
 			else:
 				var index = randi() % FLOOR_COUNT
 				$Background.set_cell(x, y, FLOOR_DIC[index])
@@ -62,12 +53,12 @@ func setup_enemies():
 	pass
 	
 func setup_food():
-	var lut_amount = randi() % 5
-	for i in range(0, lut_amount + 1):
-		var index = randi() % LUT_COUNT
+	var food_amount = randi() % 5
+	for i in range(0, food_amount + 1):
+		var index = randi() % FOOD_COUNT
 		var xp = (randi() % (BOARD_SIZE-2)) + 1;
 		var yp = (randi() % (BOARD_SIZE-2)) + 1;
-		$LUT.set_cell(xp, yp, LUT_DIC[index]);
+		$FOOD.set_cell(xp, yp, FOOD_DIC[index]);
 	pass
 
 #func _process(delta):
