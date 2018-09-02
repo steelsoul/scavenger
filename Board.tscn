@@ -12,7 +12,9 @@ __meta__ = {
 BOARD_SIZE = 8
 level = 0
 
-[node name="Background" type="TileMap" parent="." index="0"]
+[node name="Background" type="TileMap" parent="." index="0" groups=[
+"background",
+]]
 
 scale = Vector2( 2, 2 )
 z_index = -1

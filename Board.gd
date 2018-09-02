@@ -8,6 +8,7 @@ const FLOOR_COUNT = 8
 const OUTER_WALL_COUNT = 4
 const WALL_COUNT = 14
 const FOOD_COUNT = 2
+var exit_position = Vector2()
 
 export (int) var BOARD_SIZE = 8
 
@@ -44,7 +45,8 @@ func prepare_board():
 				var index = randi() % FLOOR_COUNT
 				$Background.set_cell(x, y, FLOOR_DIC[index])
 	var door_index =  $Background.tile_set.find_tile_by_name("Exit")
-	$Background.set_cell(BOARD_SIZE - 1, BOARD_SIZE-2, door_index)
+	exit_position = Vector2(BOARD_SIZE - 1, BOARD_SIZE-2)
+	$Background.set_cellv(exit_position, door_index)
 
 func setup_enemies():
 	var enemies_count = int(log(level))
