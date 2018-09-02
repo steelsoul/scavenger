@@ -1,28 +1,32 @@
 extends Node2D
 
-export (int) var rows = 8
-export (int) var columns = 8
-
-var gridPositions = PoolVector2Array()
-
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	init_positions()
 	$Player.position = $StartPosition.position
 	pass
 
-func init_positions():
-	gridPositions.resize(0)
-	for x in range(1, columns-1):
-		for y in range(1, rows-1):
-			gridPositions.append(Vector2(x, y))
-	#$Animation.set(
-	
-func generate_map():
+func _process(delta):
+#	$Player.move_player(delta, $Board.position)
+#	if Input.is_action_just_pressed("move_right"):
+#		$Player.move_any_dir($Player.RIGHT)
+#	elif Input.is_action_just_pressed("move_down"):
+#		$Player.move_any_dir($Player.DOWN)
+#	elif Input.is_action_just_pressed("move_left"):
+#		$Player.move_any_dir($Player.LEFT)
+#	elif Input.is_action_just_pressed("move_up"):
+#		$Player.move_any_dir($Player.UP)
+#	elif Input.is_action_just_pressed("fight"):
+#		$Player.fight()
+		
+#	if $Player.position.x + $Board.position.x + 32 > 32*$Board.BOARD_SIZE:
+#		$Board.position.x -= 1
+#	elif $Player.position.x - $Board.position.x + 32 > 32*$Board.BOARD_SIZE:
+#		$Board.position.x += 1
+#
+#	if $Player.position.y + $Board.position.y + 32 > 32*$Board.BOARD_SIZE:
+#		$Board.position.y -= 1
+#	elif $Player.position.y - $Board.position.y + 32 > 32*$Board.BOARD_SIZE:
+#		$Board.position.y += 1
+		
+	#$Board.position 
 	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+	

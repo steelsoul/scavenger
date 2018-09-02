@@ -37,7 +37,7 @@ func make_any_dic(item_name, item_count, item_dic):
 func prepare_board():
 	for x in range(0, BOARD_SIZE):
 		for y in range(0, BOARD_SIZE):
-			if x == 0 || x == 7 || y == 0 || y == 7:
+			if x == 0 || x == BOARD_SIZE-1 || y == 0 || y == BOARD_SIZE-1:
 				var index = randi() % OUTER_WALL_COUNT
 				$Background.set_cell(x, y, OUTER_WALL_DIC[index])
 			else:
@@ -53,13 +53,17 @@ func setup_enemies():
 	pass
 	
 func setup_food():
-	var food_amount = randi() % 5
+	var food_amount = 2 + randi() % int(log(BOARD_SIZE))
 	for i in range(0, food_amount + 1):
 		var index = randi() % FOOD_COUNT
 		var xp = (randi() % (BOARD_SIZE-2)) + 1;
 		var yp = (randi() % (BOARD_SIZE-2)) + 1;
 		$FOOD.set_cell(xp, yp, FOOD_DIC[index]);
 	pass
+	
+func clear_food_cell(v2):
+	$FOOD.set_cellv(v2, -1)
+
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

@@ -97,7 +97,7 @@ position = Vector2( 16, 16 )
 scale = Vector2( 0.5, 0.5 )
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -124,7 +124,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -150,11 +150,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall3/StaticBody2D" index="0"]
 
@@ -175,11 +176,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall4/StaticBody2D" index="0"]
 
@@ -188,7 +190,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="OuterWall1" type="Sprite" parent="." index="12"]
 
-editor/display_folded = true
 position = Vector2( 64, 192 )
 texture = ExtResource( 1 )
 centered = false
@@ -200,11 +201,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterWall1/StaticBody2D" index="0"]
 
@@ -213,7 +215,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="OuterWall2" type="Sprite" parent="." index="13"]
 
-editor/display_folded = true
 position = Vector2( 96, 192 )
 texture = ExtResource( 1 )
 centered = false
@@ -225,11 +226,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterWall2/StaticBody2D" index="0"]
 
@@ -238,7 +240,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Wall5" type="Sprite" parent="." index="14"]
 
-editor/display_folded = true
 position = Vector2( 128, 192 )
 texture = ExtResource( 1 )
 centered = false
@@ -250,11 +251,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall5/StaticBody2D" index="0"]
 
@@ -263,7 +265,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32, 0, 0 )
 
 [node name="OuterWall3" type="Sprite" parent="." index="15"]
 
-editor/display_folded = true
 position = Vector2( 160, 192 )
 texture = ExtResource( 1 )
 centered = false
@@ -275,11 +276,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterWall3/StaticBody2D" index="0"]
 
@@ -288,7 +290,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Wall9" type="Sprite" parent="." index="16"]
 
-editor/display_folded = true
 position = Vector2( 192, 192 )
 texture = ExtResource( 1 )
 centered = false
@@ -300,11 +301,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall9/StaticBody2D" index="0"]
 
@@ -313,7 +315,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Wall10" type="Sprite" parent="." index="17"]
 
-editor/display_folded = true
 position = Vector2( 224, 192 )
 texture = ExtResource( 1 )
 centered = false
@@ -325,11 +326,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall10/StaticBody2D" index="0"]
 
@@ -338,7 +340,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Wall11" type="Sprite" parent="." index="18"]
 
-editor/display_folded = true
 position = Vector2( 0, 224 )
 texture = ExtResource( 1 )
 centered = false
@@ -350,11 +351,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall11/StaticBody2D" index="0"]
 
@@ -363,7 +365,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Wall12" type="Sprite" parent="." index="19"]
 
-editor/display_folded = true
 position = Vector2( 32, 224 )
 texture = ExtResource( 1 )
 centered = false
@@ -375,11 +376,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall12/StaticBody2D" index="0"]
 
@@ -388,7 +390,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Wall13" type="Sprite" parent="." index="20"]
 
-editor/display_folded = true
 position = Vector2( 64, 224 )
 texture = ExtResource( 1 )
 centered = false
@@ -400,11 +401,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall13/StaticBody2D" index="0"]
 
@@ -413,7 +415,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Wall14" type="Sprite" parent="." index="21"]
 
-editor/display_folded = true
 position = Vector2( 96, 224 )
 texture = ExtResource( 1 )
 centered = false
@@ -425,11 +426,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall14/StaticBody2D" index="0"]
 
@@ -438,7 +440,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Wall8" type="Sprite" parent="." index="22"]
 
-editor/display_folded = true
 position = Vector2( 128, 224 )
 texture = ExtResource( 1 )
 centered = false
@@ -450,11 +451,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall8/StaticBody2D" index="0"]
 
@@ -463,7 +465,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="OuterWall4" type="Sprite" parent="." index="23"]
 
-editor/display_folded = true
 position = Vector2( 160, 224 )
 texture = ExtResource( 1 )
 centered = false
@@ -475,11 +476,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterWall4/StaticBody2D" index="0"]
 
@@ -488,7 +490,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Wall7" type="Sprite" parent="." index="24"]
 
-editor/display_folded = true
 position = Vector2( 192, 224 )
 texture = ExtResource( 1 )
 centered = false
@@ -500,11 +501,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall7/StaticBody2D" index="0"]
 
@@ -513,7 +515,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Wall6" type="Sprite" parent="." index="25"]
 
-editor/display_folded = true
 position = Vector2( 224, 224 )
 texture = ExtResource( 1 )
 centered = false
@@ -525,11 +526,12 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall6/StaticBody2D" index="0"]
 
@@ -538,7 +540,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Exit" type="Sprite" parent="." index="26"]
 
-editor/display_folded = true
 position = Vector2( 0, 64 )
 texture = ExtResource( 1 )
 centered = false
@@ -549,12 +550,13 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="StaticBody2D" type="StaticBody2D" parent="Exit" index="0"]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 16
+collision_mask = 8
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Exit/StaticBody2D" index="0"]
 
@@ -563,7 +565,6 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Food1" type="Sprite" parent="." index="27"]
 
-editor/display_folded = true
 position = Vector2( 0, 112 )
 texture = ExtResource( 1 )
 centered = false
@@ -574,12 +575,13 @@ _sections_unfolded = [ "Offset", "Region" ]
 [node name="StaticBody2D" type="StaticBody2D" parent="Food1" index="0"]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Food1/StaticBody2D" index="0"]
 
@@ -588,26 +590,28 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Food2" type="Sprite" parent="." index="28"]
 
-editor/display_folded = true
 position = Vector2( 32, 112 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 64, 32, 32 )
-_sections_unfolded = [ "Offset", "Region" ]
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Food2" index="0"]
 
+position = Vector2( 0, -0.5 )
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 2
+collision_mask = 12
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Food2/StaticBody2D" index="0"]
 
+position = Vector2( 0, 0.5 )
 build_mode = 0
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 

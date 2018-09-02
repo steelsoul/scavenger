@@ -36,7 +36,9 @@ format = 1
 tile_data = PoolIntArray(  )
 _sections_unfolded = [ "Collision", "Z Index" ]
 
-[node name="FOOD" type="TileMap" parent="." index="1"]
+[node name="FOOD" type="TileMap" parent="." index="1" groups=[
+"food",
+]]
 
 scale = Vector2( 2, 2 )
 z_index = 3
