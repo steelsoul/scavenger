@@ -14,8 +14,6 @@ position = Vector2( 192, 128 )
 
 [node name="Level" parent="." index="1" instance=ExtResource( 3 )]
 
-BOARD_SIZE = 10
-
 [node name="Info" type="Label" parent="." index="2"]
 
 anchor_left = 0.0

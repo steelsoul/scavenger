@@ -14,6 +14,7 @@ func update_camera():
 	canvas_transform[2] = - player.position + screen_size / 2
 	get_viewport().set_canvas_transform(canvas_transform)
 	$Info.rect_position = info_position - canvas_transform[2]
+	pass
 	
 func _process(delta):
 	if Input.is_mouse_button_pressed(BUTTON_LEFT):
@@ -24,7 +25,6 @@ func _process(delta):
 		
 		wp.x = floor(wp.x / 2)
 		wp.y = floor(wp.y / 2)
-		
 		
 		print(mp, " is ", wp)
 	$Info.text = "Food: " + str($Player.food)

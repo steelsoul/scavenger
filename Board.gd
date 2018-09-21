@@ -22,7 +22,7 @@ func _ready():
 	setup_enemies()
 	setup_food()
 	pass
-	
+
 func setup_dictionaries():
 	make_any_dic("Floor", FLOOR_COUNT, FLOOR_DIC)
 	make_any_dic("Wall", WALL_COUNT, WALL_DIC)
@@ -64,7 +64,13 @@ func setup_food():
 	pass
 	
 func clear_food_cell(v2):
+	print("will clear: ", v2)
+	var index = 28 - $FOOD.get_cellv(v2)
 	$FOOD.set_cellv(v2, -1)
+# cell disappear
+	var pos = 2 * $FOOD.map_to_world(v2) + Vector2(32, 32)
+	$ModifiedSprite.play_sprite_animation(index)
+	$ModifiedSprite.position = pos
 
 
 #func _process(delta):

@@ -83,7 +83,6 @@ func check_collisions(vec):
 	pass
 	
 func get_collider_position(collider):
-	var canvas_transform = get_viewport().get_canvas_transform()
 	var wp = collider.world_to_map(position + Vector2(STEP_SIZE/2, STEP_SIZE/2) + $DirectionRay.cast_to)
 	wp.x = floor(wp.x / 2)
 	wp.y = floor(wp.y / 2)
@@ -97,6 +96,7 @@ func make_decision(is_collide, dir_vec):
 	if is_collide:
 		var collider = $DirectionRay.get_collider()
 		if collider.is_in_group("food"):
+			#TODO: replace fn with signal
 			collider.get_parent().clear_food_cell(get_collider_position(collider))
 			food_adjustment = 50 # fixme: make constant
 		elif collider.is_in_group("background"):
